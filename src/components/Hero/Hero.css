@@ -1,0 +1,151 @@
+header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+}
+.heroInto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    font-weight: bolder;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 5rem;
+}
+#hey{
+    opacity: 0;
+    animation: animeHey 1s 2s forwards;
+}
+#iAm{
+    opacity: 0;
+    animation: animeHey 1s 2s forwards;
+}
+
+#abhay{
+    opacity: 0;
+    animation: animeAbhay 3s 2s forwards;
+}
+header img{
+    max-width: 250px;
+    opacity: 0;
+    transform: scale(0%);
+    animation: animeImg 1s 5s forwards;
+    border-radius: 50%;
+}
+
+header article{
+    margin-top: 1rem;
+    padding: 0 1rem;
+    opacity: 0;
+    animation: animeArticle 250ms 5s forwards;
+}
+
+/* desktop screens */
+@media screen and (min-width: 900px) {
+    .hero{
+        justify-content: flex-start;
+    }
+    .heroInto{
+        flex-direction: row;
+        align-items: center;
+        height: 50vh;
+        justify-self: flex-start;
+    }
+    .heroInto *{
+        margin: auto 0.75rem;
+    }
+    #iAm{
+        opacity: 0;
+        animation: animeIAM2 1s 2s forwards;
+    }
+    #abhay{
+        opacity: 0;
+        animation: animeAbhay2 3s 2s forwards;
+    }
+}
+
+
+@keyframes animeHey {
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes animeIAM{
+    from{
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animeIAM2{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animeAbhay{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    25%, 75%{
+        opacity: 1;
+        transform: translateY(-250px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animeAbhay2{
+    0%{
+        opacity: 0;
+        transform: translateY(100%) translateX(-250px);
+    }
+    25%, 75%{
+        opacity: 1;
+        transform: translateY(0%) translateX(-250px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes animeImg{
+    from{
+        opacity: 0;
+        transform: scale(0%);
+    }
+    to{
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+@keyframes animeArticle {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

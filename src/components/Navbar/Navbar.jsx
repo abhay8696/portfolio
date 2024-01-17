@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //styles
 import "./Navbar.css";
-import menuIcon from "../assets/menuIcon.svg"
+import menuIcon from "../../assets/menuIcon.svg"
 
 
 const NavList = ({ulClasses, liClasses})=>{

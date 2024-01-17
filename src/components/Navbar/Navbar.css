@@ -59,7 +59,7 @@ nav h1{
 }
 .navLinks-bg:hover{
     transform: translateY(-10px);
-    background-color: red;
+    /* background-color: red; */
 }
 .linkOut{
     transform: translateX(0%);
@@ -89,5 +89,14 @@ nav h1{
     }
     .navList-sm{
         display: none;
+    }
+    #delay1{
+        transition-delay: 0ms;
+    }
+    #delay2{
+        transition-delay: 0ms;
+    }
+    #delay3{
+        transition-delay: 0ms;
     }
   }
