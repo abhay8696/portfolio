@@ -3,8 +3,9 @@ header{
     align-items: center;
     flex-direction: column;
     height: 80vh;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
+    width: 100%;
 }
 .heroInto{
     display: flex;
@@ -43,6 +44,15 @@ header article{
     padding: 0 1rem;
     /* animation: animeArticle 250ms 5s forwards; */
     animation-delay: 5s !important;
+    width: 100%;
+    max-width: 500px;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 .socialLinks{
     display: flex;
@@ -71,6 +81,12 @@ header article{
     }
     .heroInto *{
         margin: auto 0.75rem;
+    }
+    .links{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        /* background-color: rebeccapurple; */
     }
     #iAm{
         opacity: 0;
