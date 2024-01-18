@@ -25,7 +25,7 @@ const Navbar = () => {
     return (
         <nav>
             <h1 className='brand'>{'</>Abhay'}</h1>
-            <NavList ulClasses = "navList navList-bg" liClasses = "navLinks navLinks-bg"/>
+            <NavList ulClasses = "navList navList-bg" liClasses = "navLinks navLinks-bg hoverAction"/>
             <NavList ulClasses = {`navList navList-sm`} liClasses = {`navLinks navLinks-sm ${navLinkPosition}`}/>
             <img className='menuIcon' src={menuIcon} onClick={handleClick}/>
         </nav>

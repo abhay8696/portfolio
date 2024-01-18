@@ -5,7 +5,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1400px;
+    width: 100%;
     max-width: 100vw;
 }
 
@@ -47,7 +47,6 @@ nav h1{
     cursor: pointer;
 }
 .navLinks-bg{
-    transition: 250ms all;
 }
 .navLinks-sm{
     text-align: right;
@@ -57,10 +56,7 @@ nav h1{
     justify-content: flex-end;
     transition: 500ms all;
 }
-.navLinks-bg:hover{
-    transform: translateY(-10px);
-    /* background-color: red; */
-}
+
 .linkOut{
     transform: translateX(0%);
 }

@@ -1,0 +1,5 @@
+classNames:
+
+App.css
+    hoverAction: animations on hover
+    animeOnVisible: animations when elements comes in viewport
