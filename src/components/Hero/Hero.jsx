@@ -10,16 +10,23 @@ import gmailIcon from "../../assets/gmailIcon.svg";
 /*
  classNames: animeOnVisible, hoverAction are defined in app.css
 */
+
+const bio = "Once upon a time in a world filled with pixels and code, there was a coder who decided to embark on a quest to conquer the digital realm. Armed with a keyboard and a passion for pixels, he built many industry grade projects from scratch and got armed with many technological skills useful for tech projects."
 const Hero = () => {
     return (
-        <header className='hero'>
+        <header className='hero' id='hero'>
             <div className='heroInto'>
                 <h1 id='hey'>hey!</h1>
                 <h1 id='iAm'>I'm</h1>
                 <img src={myDP} className='myDP'/>
                 <h1 id='abhay'>abhay.</h1>
             </div>
-            <article className='animeOnVisible'>I have built many industry grade projects from scratch and am armed with many technological skills useful for tech projects. Check out my projects below. :{")"}</article>
+            <article className='animeOnVisible'>
+                {bio}
+                <br/>
+                He is known as the 
+                <span id='designation' className='animeOnVisible'>software developer.</span>
+            </article>
             <div className='links'>
                 <div className='socialLinks animeOnVisible'>
                     <a className='hoverAction' href='#' target='_blank'>
@@ -32,7 +39,7 @@ const Hero = () => {
                         <img src={instagramIcon} alt='instagram icon' />
                     </a>
                 </div>
-                <div className='email'>kambleabhaygautam@gmail.com</div>
+                <div className='email animeOnVisible'>kambleabhaygautam@gmail.com</div>
             </div>
         </header>
     );

@@ -1,6 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --color-black: #141414;
+  --color-grey: #7a7a7a1c;
   line-height: 1.5;
   font-weight: 400;
 
@@ -16,7 +17,9 @@
   align-items: center;
   justify-content: center;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 *{
   margin: 0;
   box-sizing: border-box;
@@ -59,3 +62,7 @@ h6 {
   isolation: isolate;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}

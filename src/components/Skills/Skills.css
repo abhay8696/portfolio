@@ -1,0 +1,28 @@
+
+.Skills{
+    height: 100vh;
+}
+.card-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.SkillCard{
+    /* background-color: var(--color-grey); */
+    padding: 0.25rem;
+    border-radius: 4px;
+    width: 75px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.skillIcon{
+    max-width: 75%;
+}
+.skillText{
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
