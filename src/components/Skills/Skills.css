@@ -2,6 +2,31 @@
 .Skills{
     height: 100vh;
 }
+.skillsHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggleSkillsButton{
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+.toggleSkillsButton img{
+    max-height: 1.5rem;
+    margin-left: 0.25rem;
+    transition: all 350ms;
+}
+.showDown{
+}
+.showUp{
+    /* transform: rotate(-180deg); */
+    transform: rotate(-180deg);
+}
 .card-section{
     display: flex;
     flex-wrap: wrap;

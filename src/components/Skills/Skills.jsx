@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 //styles
 import "./Skills.css";
 import jsIcon from "../../assets/jsIcon.svg";
@@ -14,6 +14,7 @@ import sassIcon from "../../assets/sassIcon.svg";
 import mysqlIcon from "../../assets/mysqlIcon.svg";
 import mongoIcon from "../../assets/mongoIcon.svg";
 import nextIcon from "../../assets/nextIcon.svg";
+import arrowIcon from "../../assets/arrowIcon.svg"
 //componenets
 import SkillCard from './SkillCard';
 
@@ -35,6 +36,7 @@ const iconsArr = [
 ]
 //classNames: commonWrapper- from App.css
 const Skills = () => {
+    const [showAll, setShowAll] = useState(false);
 
     const displaySkillCards = ()=>{
         return iconsArr.map(card=>{
@@ -46,7 +48,13 @@ const Skills = () => {
     // console.log(displaySkillCards())
     return (
         <section className='commonWrapper Skills' id='skills'>
-            <h1>Skills</h1>
+            <div className='skillsHead'>
+                <h1>Skills</h1>
+                <button className='toggleSkillsButton'>
+                    <span onClick={()=> setShowAll(!showAll)}>{!showAll ? "hide" : "show all"}</span>
+                    <span><img className={showAll ? "showDown" : "showUp"} src={arrowIcon} alt="arrow icon" /></span>
+                </button>
+            </div>
             <section className='card-section'>
                 {displaySkillCards()}
             </section>
