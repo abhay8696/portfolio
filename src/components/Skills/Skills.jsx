@@ -41,7 +41,7 @@ const Skills = () => {
     const displaySkillCards = ()=>{
         return iconsArr.map(card=>{
             const { img, text } = card;
-            return <SkillCard icon={img} skillText={text} key={text}/>
+            return <SkillCard icon={img} skillText={text} key={text} showAll={showAll}/>
         })
     }
 
@@ -50,12 +50,12 @@ const Skills = () => {
         <section className='commonWrapper Skills' id='skills'>
             <div className='skillsHead'>
                 <h1>Skills</h1>
-                <button className='toggleSkillsButton'>
-                    <span onClick={()=> setShowAll(!showAll)}>{!showAll ? "hide" : "show all"}</span>
+                <button onClick={()=> setShowAll(!showAll)} className='toggleSkillsButton'>
+                    <span>{!showAll ? "hide" : "show all"}</span>
                     <span><img className={showAll ? "showDown" : "showUp"} src={arrowIcon} alt="arrow icon" /></span>
                 </button>
             </div>
-            <section className='card-section'>
+            <section className='card-section-small'>
                 {displaySkillCards()}
             </section>
         </section>
