@@ -17,6 +17,7 @@ import nextIcon from "../../assets/nextIcon.svg";
 import arrowIcon from "../../assets/arrowIcon.svg"
 //componenets
 import SkillCard from './SkillCard';
+import SkillCardBig from './SkillCardBig';
 
 
 const iconsArr = [
@@ -25,7 +26,6 @@ const iconsArr = [
     {img: jsIcon, text: "JavaScript"},
     {img: gitIcon, text: "Git"},
     {img: htmlIcon, text: "HTML"},
-    {img: nextIcon, text: "NextJS"},
     {img: cssIcon, text: "CSS"},
     {img: ubuntuIcon, text: "Linux"},
     {img: mongoIcon, text: "MongoDB"},
@@ -33,15 +33,27 @@ const iconsArr = [
     {img: sassIcon, text: "Sass"},
     {img: bootstrap, text: "Bootstrap"},
     {img: materialUiIcon, text: "Material UI"},
+    {img: nextIcon, text: "NextJS"},
 ]
 //classNames: commonWrapper- from App.css
 const Skills = () => {
     const [showAll, setShowAll] = useState(false);
 
+    let cardSectionSmall_class_blurBack = 'card-section-small blurBackground';
+
     const displaySkillCards = ()=>{
         return iconsArr.map(card=>{
             const { img, text } = card;
             return <SkillCard icon={img} skillText={text} key={text} showAll={showAll}/>
+        })
+    }
+
+    const displaySkillCardsBig = ()=>{
+        let delay = -3;
+        return iconsArr.map(card=>{
+            delay = delay+3;
+            const { img, text } = card;
+            return <SkillCardBig showAll={showAll} icon={img} skillText={text} key={`${text}Big`} animeDelay={delay} />
         })
     }
 
@@ -55,8 +67,12 @@ const Skills = () => {
                     <span><img className={showAll ? "showDown" : "showUp"} src={arrowIcon} alt="arrow icon" /></span>
                 </button>
             </div>
-            <section className='card-section-small'>
+            <section className={!showAll ? cardSectionSmall_class_blurBack : 'card-section-small'}>
                 {displaySkillCards()}
+            </section>
+            <section className='card-caraousel'>
+                {displaySkillCardsBig()}
+                {/* <SkillCardBig icon={nodeIcon} skillText={"Node"} key={`NodeBig`} /> */}
             </section>
         </section>
     );

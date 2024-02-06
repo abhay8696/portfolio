@@ -1,11 +1,17 @@
 
 .Skills{
     height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .skillsHead{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 50px;
+    width: 100%;
 }
 .toggleSkillsButton{
     height: 1.5rem;
@@ -28,12 +34,21 @@
     /* transform: rotate(-180deg); */
     transform: rotate(-180deg);
 }
+.blurBackground{
+    background-color: #14141480;
+    backdrop-filter: blur(3px);
+    /* transition: all 1s; */
+}
 .card-section-small{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
-    backdrop-filter: blur(3px);
-    background-color: #14141480;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all 1s;
+    top: 150px;
 }
 .SkillCardSmall-hide{
     transform: scale(0);
@@ -62,16 +77,63 @@
     font-size: 0.75rem;
     opacity: 0.75;
 }
+.card-caraousel{
+    margin-top: 1rem;
+    z-index: -1;
+    position: relative;
+}
+.SkillCardBig{
+    width: 250px;
+    justify-self: center;
+    padding: 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 1rem;
+    animation: caraousel 39s infinite;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.skillIconBig{
+    max-width: 75%;
+    /* animation: caraousel 3s infinite; */
+}
+.skillTextBig{
+    /* animation: caraousel 3s infinite; */
+}
 
 
 /* desktop screens */
 @media screen and (min-width: 900px) {
     .card-section-small{
         justify-content: center;
+        /* max-width: 75%; */
+        transform: translateX(-50%);
+        left: 50%;
     }
     .SkillCardSmall{
-        /* background-color: var(--color-grey); */
     width: 100px;
     height: 133px;
     }
 }
+@keyframes caraousel {
+    0%, 44.3% ,100%{
+        transform: translateX(0%) scale(90%);
+        opacity: 0;
+    }
+    /* 2%, 5.7%{ */
+    46.3%, 50%{
+        transform: translateX(-50%) scale(100%);
+        opacity: 1;
+    }
+    /* 7.7%{ */
+    52%{
+        transform: translateX(-100%) scale(90%);
+        opacity: 0;
+    }
+}
+
+/* 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 */

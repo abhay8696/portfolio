@@ -2,14 +2,15 @@ import React from 'react';
 //styles
 import "./Skills.css";
 
-const SkillCard = props => {
-    const { icon, skillText } = props;
+const SkillCardBig = props => {
+    const { icon, skillText, animeDelay, showAll } = props;
+    const greyBack = 'SkillCardBig commonBackgroundGrey'
     return (
-        <div className='SkillCardBig'>
+        <div className= {!showAll ? "SkillCardBig" : greyBack} style={{animationDelay: `${animeDelay}s`}}>
             <img src={icon} alt={skillText} className='skillIconBig'/>
-            <span className='skillTextBig'>{skillText}</span>
+            {!showAll ? null : <span className='skillTextBig'>{skillText}</span>}
         </div>
     );
 };
 
-export default SkillCard;
+export default SkillCardBig;
