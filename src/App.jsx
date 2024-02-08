@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <Hero/>
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
     </main>
     </>
   )

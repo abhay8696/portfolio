@@ -1,7 +1,7 @@
 import React from 'react';
 //styles
 import "./Hero.css"
-import myDP from "../../assets/me1.jpg";
+import myDP from "../../assets/me2.jpg";
 import instagramIcon from "../../assets/instagramIcon.svg";
 import linkedInIcon from "../../assets/linkedInIcon2.svg";
 import githubIcon from "../../assets/githubIcon.svg";

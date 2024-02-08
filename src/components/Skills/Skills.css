@@ -1,6 +1,6 @@
 
 .Skills{
-    height: 100vh;
+    height: 75vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@
     align-items: center;
     gap: 0.75rem;
     border-radius: 1rem;
-    animation: caraousel 39s infinite;
+    animation: caraousel 45s infinite;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -110,7 +110,7 @@
 @media screen and (min-width: 900px) {
     .card-section-small{
         justify-content: center;
-        /* max-width: 75%; */
+        max-width: 75%;
         transform: translateX(-50%);
         left: 50%;
     }
@@ -120,17 +120,15 @@
     }
 }
 @keyframes caraousel {
-    0%, 44.3% ,100%{
+    0%, 100%{
         transform: translateX(0%) scale(90%);
         opacity: 0;
     }
-    /* 2%, 5.7%{ */
-    46.3%, 50%{
+    2%, 5.7%{
         transform: translateX(-50%) scale(100%);
         opacity: 1;
     }
-    /* 7.7%{ */
-    52%{
+    7.7%{
         transform: translateX(-100%) scale(90%);
         opacity: 0;
     }

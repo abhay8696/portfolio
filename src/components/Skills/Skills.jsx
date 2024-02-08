@@ -15,6 +15,8 @@ import mysqlIcon from "../../assets/mysqlIcon.svg";
 import mongoIcon from "../../assets/mongoIcon.svg";
 import nextIcon from "../../assets/nextIcon.svg";
 import arrowIcon from "../../assets/arrowIcon.svg"
+import postmanIcon from "../../assets/postmanIcon.svg"
+import firebaseIcon from "../../assets/firebaseIcon.svg"
 //componenets
 import SkillCard from './SkillCard';
 import SkillCardBig from './SkillCardBig';
@@ -34,6 +36,8 @@ const iconsArr = [
     {img: bootstrap, text: "Bootstrap"},
     {img: materialUiIcon, text: "Material UI"},
     {img: nextIcon, text: "NextJS"},
+    {img: postmanIcon, text: "Postman"},
+    {img: firebaseIcon, text: "Firebase"},
 ]
 //classNames: commonWrapper- from App.css
 const Skills = () => {
