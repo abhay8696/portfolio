@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 //styles
 import "./Projects.css";
+import TabBar from './TabBar';
 
 //classNames: commonWrapper- from App.css
+
+
+//components
+const TabButton = ({item, id, selected, handleClick})=>{
+    const isSelected = id === selected ? "selectedTab" : " ";
+    return (
+        <button onClick={()=>handleClick(id)} className={`projectTab tab-${id} ${isSelected}`}>{item}</button>
+    )
+}
+
 const Projects = () => {
+    //states
+    const [selected, setSelected] = useState(0);
+    
+    //functions
+    const handleClick = (tabNum)=>{
+        setSelected(tabNum);
+    }
+
     return (
         <div id='projects' className='Projects commonWrapper'>
-            <h1>My Works</h1>
+            <h1>Projects</h1>
+            <TabBar selected={selected} handleClick={handleClick}/>
         </div>
     );
 };
