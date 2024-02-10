@@ -30,7 +30,7 @@ const Navbar = () => {
     }
     return (
         <nav>
-            <a href='#hero'><h1 className='brand'>{'</>Abhay'}</h1></a>
+            <a href='#hero'><h1 className='brand'>{'</>Brand'}</h1></a>
             <NavList ulClasses = "navList navList-bg" liClasses = "navLinks navLinks-bg hoverAction"/>
             <NavList toggleNav={handleClick} ulClasses = {`navList navList-sm ${navListPosition}`} liClasses = {`navLinks navLinks-sm ${navLinkPosition}`}/>
             <img className='menuIcon' src={menuIcon} onClick={handleClick}/>

@@ -27,7 +27,7 @@ const TabBar = props => {
     }
 
     return (
-        <div className='tabs'>
+        <div className='tabBar'>
             {displayTabs()}
         </div>
     );
