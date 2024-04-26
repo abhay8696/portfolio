@@ -5,28 +5,19 @@ import TabBar from './TabBar';
 
 //classNames: commonWrapper- from App.css
 
-
-//components
-const TabButton = ({item, id, selected, handleClick})=>{
-    const isSelected = id === selected ? "selectedTab" : " ";
-    return (
-        <button onClick={()=>handleClick(id)} className={`projectTab tab-${id} ${isSelected}`}>{item}</button>
-    )
-}
-
 const Projects = () => {
     //states
-    const [selected, setSelected] = useState(0);
+    const [tabNumber, setTabNumber] = useState(1);
     
     //functions
     const handleClick = (tabNum)=>{
-        setSelected(tabNum);
+        setTabNumber(tabNum);
     }
 
     return (
         <div id='projects' className='Projects commonWrapper'>
             <h1>Projects</h1>
-            <TabBar selected={selected} handleClick={handleClick}/>
+            <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
         </div>
     );
 };
@@ -37,12 +28,13 @@ const Projects = () => {
     // law firm
     // fronntend mentor landing page
     // asiatco
+    // medify
 // e com apps
     // qkart
     // frontend mentor product page
     // qtrip
     // frontend mentor form
-// game
+// games
     //quo-react-dor
 // other
     // qtify
