@@ -17,7 +17,7 @@ const TabBar = props => {
         let id = 0;
 
         return data.map(item=>{
-            return <TabButton item={item} id={id++} tabNumber={tabNumber} handleClick={handleClick}/>
+            return <TabButton key={`tabButton-${item}`} item={item} id={id++} tabNumber={tabNumber} handleClick={handleClick}/>
         })
     }
 

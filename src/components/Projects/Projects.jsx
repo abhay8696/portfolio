@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //styles
 import "./Projects.css";
 import TabBar from './TabBar';
+import Card from './Card/Card';
 
 //classNames: commonWrapper- from App.css
 
@@ -18,6 +19,11 @@ const Projects = () => {
         <div id='projects' className='Projects commonWrapper'>
             <h1>Projects</h1>
             <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
+            <div className='tabPageWrapper'>
+                <div className='tabPage'>
+                    <Card />
+                </div>
+            </div>
         </div>
     );
 };
