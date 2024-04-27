@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 //styles
 import "./Projects.css";
 import TabBar from './TabBar';
+//assets
+//components
 import Card from './Card/Card';
 
 //classNames: commonWrapper- from App.css
@@ -21,7 +23,7 @@ const Projects = () => {
             <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
             <div className='tabPageWrapper'>
                 <div className='tabPage'>
-                    <Card />
+                    <Card cardName= "medify" head="medify" subtext="React-based web application/landing page that allows users to find medical centers in a specific state and city across the USA and book appointments."/>
                 </div>
             </div>
         </div>
@@ -30,22 +32,22 @@ const Projects = () => {
 
 // problem solving
     // maze runner
+//games
+    // quo-react-dor
 // landing pages
-    // law firm
-    // fronntend mentor landing page
+    // law firm - done
+    // sunnyside - fronntend mentor landing page
     // asiatco
-    // medify
+    // medify - done
+    // logistics company
 // e com apps
     // qkart
     // frontend mentor product page
     // qtrip
     // frontend mentor form
-// games
-    //quo-react-dor
-// other
+// API's
     // qtify
     // countries
     // ip addresstracker
-    // frontend mentor payment form
 
 export default Projects;

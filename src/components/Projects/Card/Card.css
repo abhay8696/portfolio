@@ -19,11 +19,11 @@
     background-position: center;
     background-size: cover;
 }
-.cardImg{
-    background-image: url(../../../assets/medify1.jpg);
+.medifyImg{
+    background-image: url(../../../assets/projects/medify1.jpg);
 }
-.cardGif{
-    background-image: url(../../../assets/medifyGif.gif);
+.medifyGif{
+    background-image: url(../../../assets/projects/medifyGif.gif);
 }
 .cardText{
     display: flex;
