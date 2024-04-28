@@ -13,7 +13,7 @@ const TabBar = props => {
 
     //functions
     const displayTabs = ()=>{
-        const data = ['Problem Solving', 'Landing Pages', 'E-com', 'Games', 'Frontend'];
+        const data = ['Problem Solving', 'Landing Pages', 'E-com', 'Games', 'API', 'all'];
         let id = 0;
 
         return data.map(item=>{

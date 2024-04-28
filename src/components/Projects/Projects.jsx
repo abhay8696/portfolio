@@ -18,7 +18,10 @@ const Projects = () => {
         setTabNumber(tabNum);
     }
     const displayCard = () => {
-        return psdsArr.map(item => {
+        const all = [psdsArr, landingPagesArr, ecomArr, gamesArr, apiArr].flat();
+        let projects = [psdsArr, landingPagesArr, ecomArr, gamesArr, apiArr, all];
+        console.log(all)
+        return projects[tabNumber].map(item => {
             const { head, cardName, subtext, link, github, img, gif } = item;
             return (
                 <Card 
@@ -36,13 +39,13 @@ const Projects = () => {
 
     return (
         <div id='projects' className='Projects commonWrapper'>
-            <h1>Projects</h1>
+            <h1>My Works</h1>
             <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
-            <div className='tabPageWrapper'>
+            {/* <div className='tabPageWrapper'> */}
                 <div className='tabPage'>
                     {displayCard()}
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 };
