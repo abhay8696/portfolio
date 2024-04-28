@@ -5,6 +5,7 @@ import TabBar from './TabBar';
 //assets
 //components
 import Card from './Card/Card';
+import { apiArr, ecomArr, gamesArr, landingPagesArr, psdsArr } from '../../../functions/projectsData';
 
 //classNames: commonWrapper- from App.css
 
@@ -16,6 +17,22 @@ const Projects = () => {
     const handleClick = (tabNum)=>{
         setTabNumber(tabNum);
     }
+    const displayCard = () => {
+        return psdsArr.map(item => {
+            const { head, cardName, subtext, link, github, img, gif } = item;
+            return (
+                <Card 
+                    cardName= {cardName} 
+                    head={head} 
+                    subtext={subtext}
+                    link={link}
+                    github={github}
+                    img={img}
+                    gif={gif}
+                />
+            )
+        })
+    }
 
     return (
         <div id='projects' className='Projects commonWrapper'>
@@ -23,7 +40,7 @@ const Projects = () => {
             <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
             <div className='tabPageWrapper'>
                 <div className='tabPage'>
-                    <Card cardName= "medify" head="medify" subtext="React-based web application/landing page that allows users to find medical centers in a specific state and city across the USA and book appointments."/>
+                    {displayCard()}
                 </div>
             </div>
         </div>

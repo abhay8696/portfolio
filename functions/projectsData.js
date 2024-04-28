@@ -11,7 +11,7 @@ import productsPageGif from "../src/assets/projects/productsPageGif.gif";
 import multiStepFormImg from "../src/assets/projects/multiStepForm.jpg";
 import multiStepFormGif from "../src/assets/projects/multiStepFormGif.gif";
 import quoReactDorImg from "../src/assets/projects/quoReactDor.jpg";
-import quoReactDorGif from "../src/assets/projects/quoReactDorGif.gif";
+// import quoReactDorGif from "../src/assets/projects/quoReactDorGif.gif";
 import mazeRunnerImg from "../src/assets/projects/mazeRunner.jpg";
 import mazeRunnerGif from "../src/assets/projects/mazeRunnerGif.gif";
 import qtifyImg from "../src/assets/projects/qtify.jpg";
@@ -24,7 +24,7 @@ import logisticsCompanyImg from "../src/assets/projects/logisticsCompany.jpg";
 import logisticsCompanyGif from "../src/assets/projects/logisticsCompanyGif.gif";
 
 
-const landingPages = [
+export const landingPagesArr = [
     {
         head: "medify",
         subtext: "React-based web application/landing page that allows users to find medical centers in a specific state and city across the USA and book appointments.",
@@ -64,7 +64,7 @@ const landingPages = [
 
 ]
 
-const ecomArr = [
+export const ecomArr = [
     {
         head: "qkart",
         subtext: "QKart is an E-commerce application offering a variety of products for customers to choose from.",
@@ -102,7 +102,7 @@ const ecomArr = [
     },
 ]
 
-const gamesArr = [
+export const gamesArr = [
     {
         head: "QUO-REACT-DOR - Online Board Game",
         subtext: "Successfully conceptualized and developed a visually appealing 2D board game using React. Leveraged Firestore database to enable real-time updates for multiplayer functionality, allowing seamless gameplay across remote locations.",
@@ -116,7 +116,7 @@ const gamesArr = [
     },
 ]
 
-const psdsArr = [
+export const psdsArr = [
     {
         head: "Recursive Maze Runner",
         subtext: "The simple UI app that generates and solves mazes dynamically with back-tracking",
@@ -128,7 +128,7 @@ const psdsArr = [
     },
 ]
 
-const apiArr = [
+export const apiArr = [
     {
         head: "qtify",
         subtext: "QTify is a song-browsing platform built from scratch using ReactJS paired with Material UI to deliver a seamless and aesthetic user interface.",
