@@ -115,6 +115,7 @@
         left: 50%;
     }
     .SkillCardSmall{
+        background-color: rebeccapurple;
     width: 100px;
     height: 133px;
     }
