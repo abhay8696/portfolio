@@ -66,3 +66,19 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  /* border: 1px solid #d5d5d5; */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  /* background: var(--color-grey); */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #ffffffde;
+  cursor: pointer;
+}

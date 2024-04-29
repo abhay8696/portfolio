@@ -75,7 +75,7 @@ const Skills = () => {
                 {displaySkillCards()}
             </section>
             <section className='card-caraousel'>
-                {displaySkillCardsBig()}
+                {/* {displaySkillCardsBig()} */}
                 {/* <SkillCardBig icon={nodeIcon} skillText={"Node"} key={`NodeBig`} /> */}
             </section>
         </section>
