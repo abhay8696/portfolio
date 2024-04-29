@@ -28,6 +28,7 @@
     opacity: 0.5;
     transition: 100ms;
     padding: 0;
+    color: #ffffffde;
 }
 .tabBar button:hover{
     font-size: 1rem;
