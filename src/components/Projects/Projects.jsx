@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 //styles
 import "./Projects.css";
 import TabBar from './TabBar';
-//assets
-//components
 import Card from './Card/Card';
 import { apiArr, ecomArr, gamesArr, landingPagesArr, psdsArr } from '../../../functions/projectsData';
 
@@ -17,10 +15,11 @@ const Projects = () => {
     const handleClick = (tabNum)=>{
         setTabNumber(tabNum);
     }
-    const displayCard = () => {
+    //components
+    const DisplayCard = () => {
         const all = [psdsArr, landingPagesArr, ecomArr, gamesArr, apiArr].flat();
         let projects = [psdsArr, landingPagesArr, ecomArr, gamesArr, apiArr, all];
-        console.log(all)
+        // console.log(all)
         return projects[tabNumber].map(item => {
             const { head, cardName, subtext, link, github, img, gif } = item;
             return (
@@ -32,10 +31,12 @@ const Projects = () => {
                     github={github}
                     img={img}
                     gif={gif}
+                    key={`card-${cardName}`}
                 />
             )
         })
     }
+
 
     return (
         <div id='projects' className='Projects commonWrapper'>
@@ -43,7 +44,7 @@ const Projects = () => {
             <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
             {/* <div className='tabPageWrapper'> */}
                 <div className='tabPage'>
-                    {displayCard()}
+                    <DisplayCard />
                 </div>
             {/* </div> */}
         </div>

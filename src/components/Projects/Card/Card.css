@@ -7,7 +7,6 @@
     background-color: var(--color-grey);
     border-radius: 1rem;
     padding: 0.5rem;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -46,8 +45,47 @@
     font-weight: lighter;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
+    flex: 1;
 }
 
+.CardOptions{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(3px);
+    animation: animeOnVisible 200ms forwards; /* declaration is in App.css */
+}
+.cardLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    transition: all 250ms;
+}
+.cardOptionsImg{
+    max-width: 50px;
+}
+
+.cardLinks:hover{
+    scale: 1.25;
+}
+
+
+
+/* screens below 500px */
+@media screen and (max-width: 500px) {
+    .cardText{
+        flex: 1;
+    }
+}
 
 /* screens above 500px */
 @media screen and (min-width: 500px) {
