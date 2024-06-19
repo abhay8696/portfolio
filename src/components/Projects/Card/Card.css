@@ -59,7 +59,6 @@
     align-items: center;
     justify-content: space-around;
     backdrop-filter: blur(3px);
-    animation: animeOnVisible 200ms forwards; /* declaration is in App.css */
 }
 .cardLinks{
     display: flex;
@@ -69,6 +68,8 @@
     gap: 0.25rem;
     cursor: pointer;
     transition: all 250ms;
+    text-transform: capitalize;
+    animation: animeOnVisible 200ms forwards; /* declaration is in App.css */
 }
 .cardOptionsImg{
     max-width: 50px;

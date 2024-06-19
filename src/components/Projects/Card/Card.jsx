@@ -9,17 +9,18 @@ import "./Card.css";
 
 const Card = props => {
     //props
-    const { head, cardName, subtext, link, github, img, gif } = props;
+    const { cardData, toggleProjectModal } = props;
+    const { head, cardName, subtext, link, github, img, gif } = cardData;
     //states
     const [hover, setHover] = useState(false);
     //sub-components
     const CardOptions = () => {
         return(
             <div className='CardOptions'>
-                <span className='cardLinks'>
+                {/* <span className='cardLinks' onClick={(e)=>toggleProjectModal(cardData)}>
                     <img className="cardOptionsImg" src={moreInfoImg} alt='more info' />
                     <span className='cardOptionText'>more info</span>
-                </span>
+                </span> */}
                 <a className='cardLinks' href={github} target='_blank'>
                     <img className="cardOptionsImg" src={githubImg} alt='github link' />
                     <span className='cardOptionText'>code</span>

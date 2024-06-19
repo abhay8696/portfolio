@@ -4,34 +4,37 @@ import "./Projects.css";
 import TabBar from './TabBar';
 import Card from './Card/Card';
 import { apiArr, ecomArr, gamesArr, landingPagesArr, psdsArr } from '../../../functions/projectsData';
+import ProjectInfo from './ProjectInfo/ProjectInfo';
 
 //classNames: commonWrapper- from App.css
 
 const Projects = () => {
     //states
     const [tabNumber, setTabNumber] = useState(1);
+    const [projectModal, setProjectModal] = useState({
+        visible: false,
+        projectData: null
+    })
     
     //functions
     const handleClick = (tabNum)=>{
         setTabNumber(tabNum);
     }
+    const toggleProjectModal = (data)=> setProjectModal(pre=> {
+        return {projectData: data, visible: !pre.visible}
+    });
     //components
     const DisplayCard = () => {
         const all = [psdsArr, landingPagesArr, ecomArr, gamesArr, apiArr].flat();
         let projects = [psdsArr, landingPagesArr, ecomArr, gamesArr, apiArr, all];
         // console.log(all)
-        return projects[tabNumber].map(item => {
-            const { head, cardName, subtext, link, github, img, gif } = item;
+        return projects[tabNumber].map(cardData => {
+            const { cardName } = cardData;
             return (
                 <Card 
-                    cardName= {cardName} 
-                    head={head} 
-                    subtext={subtext}
-                    link={link}
-                    github={github}
-                    img={img}
-                    gif={gif}
+                    cardData={cardData}
                     key={`card-${cardName}`}
+                    toggleProjectModal={toggleProjectModal}
                 />
             )
         })
@@ -47,6 +50,7 @@ const Projects = () => {
                     <DisplayCard />
                 </div>
             {/* </div> */}
+            {/* <ProjectInfo projectModal={projectModal} toggleProjectModal={toggleProjectModal}/> */}
         </div>
     );
 };
