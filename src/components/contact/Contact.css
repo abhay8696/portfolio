@@ -1,4 +1,122 @@
 
 .Contact{
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.contact-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* .contactIcons-section,  */
+.contactForm{
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    background-color: #7a7a7a1c;
+}
+
+.contactIcons-section{
+    /* flex: 3; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+.contactForm{
+    flex: 1;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.formTop, .formBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.formTop{
+    width: 100%;
+}
+.formBottom{
+    width: 80%;
+}
+
+.contactForm input, .contactForm textarea{
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    border: 1px solid var(--color-grey);
+    width: 100%;
+    background-color: inherit;
+}
+.heyAbhay{
+}
+.contactForm textarea{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+}
+
+.contactForm input{
+    max-width: 350px;
+}
+
+.contactForm button{
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid var(--color-grey);
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.contactForm button:hover{
+    background-color: var(--color-grey);
+}
+
+
+.ContactIconCard{
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: var(--color-grey);
+    padding: 1rem;
+}
+
+.ContactIconCard-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    opacity: 0.5;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    width: 25%;
+    /* background-color: red; */
+}
+
+.ContactIcon{
+    width: 50px;
+}
+
+.contactCardValue{
+    /* background-color: rebeccapurple; */
+}
+
+/* above 900px */
+@media screen and (min-width: 900px) {
+    .contact-body{
+        flex-direction: row-reverse;
+    }
+    .formBottom{
+        width: 50%;
+    }
 }
