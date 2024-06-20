@@ -11,7 +11,7 @@ const NavList = ({ulClasses, liClasses, toggleNav})=>{
         <ul className = {ulClasses} onClick={toggleNav}>
             <li id="delay1" className={liClasses}><a href='#projects'>Projects</a></li>
             <li id="delay2" className={liClasses}>About</li>
-            <li id="delay3" className={liClasses}>Contact</li>
+            <li id="delay3" className={liClasses}><a href='#contact'>Contact</a></li>
             <li id="delay3" className={liClasses}><a href='#skills'>Skills</a></li>
             {liClasses.includes("navLinks-sm") && <li id="delay3" className={liClasses}><img src={closeIcon}/></li>}
         </ul>

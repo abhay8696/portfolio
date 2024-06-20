@@ -91,7 +91,7 @@
     align-items: center;
     gap: 0.75rem;
     border-radius: 1rem;
-    animation: caraousel 45s infinite;
+    animation: caraousel 48s infinite;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

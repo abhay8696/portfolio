@@ -17,6 +17,7 @@ import nextIcon from "../../assets/nextIcon.svg";
 import arrowIcon from "../../assets/arrowIcon.svg"
 import postmanIcon from "../../assets/postmanIcon.svg"
 import firebaseIcon from "../../assets/firebaseIcon.svg"
+import expressIcon from "../../assets/serverIcon.svg"
 //componenets
 import SkillCard from './SkillCard';
 import SkillCardBig from './SkillCardBig';
@@ -38,6 +39,7 @@ const iconsArr = [
     {img: nextIcon, text: "NextJS"},
     {img: postmanIcon, text: "Postman"},
     {img: firebaseIcon, text: "Firebase"},
+    {img: expressIcon, text: "Express JS"},
 ]
 //classNames: commonWrapper- from App.css
 const Skills = () => {
@@ -65,7 +67,7 @@ const Skills = () => {
     return (
         <section className='commonWrapper Skills' id='skills'>
             <div className='skillsHead'>
-                <h1>Skills</h1>
+                <h2>Skills</h2>
                 <button onClick={()=> setShowAll(!showAll)} className='toggleSkillsButton'>
                     <span>{!showAll ? "hide" : "show all"}</span>
                     <span><img className={showAll ? "showDown" : "showUp"} src={arrowIcon} alt="arrow icon" /></span>

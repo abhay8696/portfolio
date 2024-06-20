@@ -43,7 +43,7 @@ const Projects = () => {
 
     return (
         <div id='projects' className='Projects commonWrapper'>
-            <h1>My Works</h1>
+            <h2>My Works</h2>
             <TabBar tabNumber={tabNumber} handleClick={handleClick}/>
             {/* <div className='tabPageWrapper'> */}
                 <div className='tabPage'>
