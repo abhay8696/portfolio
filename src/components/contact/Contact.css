@@ -59,6 +59,7 @@
 .contactForm textarea{
     width: 100%;
     padding: 0.5rem 0.5rem;
+    resize: vertical;
 }
 
 .contactForm input{
@@ -72,6 +73,7 @@
     border: 1px solid var(--color-grey);
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
+    color: white;
 }
 
 .contactForm button:hover{
@@ -80,8 +82,7 @@
 
 
 .ContactIconCard{
-    width: 400px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -97,18 +98,37 @@
     align-items: center;
     gap: 0.25rem;
     opacity: 0.5;
-    font-size: 0.85rem;
+    font-size: 12px;
     text-transform: uppercase;
     width: 25%;
     /* background-color: red; */
 }
 
 .ContactIcon{
-    width: 50px;
+    width: 30px;
 }
 
 .contactCardValue{
     /* background-color: rebeccapurple; */
+    /* font-size: 14px; */
+    /* height: 100%; */
+}
+
+.messageSent{
+    background-color: var(--color-grey);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 250px;
+}
+.sentIcon{
+    width: 50px;
+}
+
+.sentMessage, .sentIcon{
+    animation: animeOnVisible 1s forwards;
 }
 
 /* above 900px */
@@ -118,5 +138,18 @@
     }
     .formBottom{
         width: 50%;
+    }
+    .ContactIconCard{
+        width: 400px;
+    }
+    .ContactIcon{
+        width: 50px;
+    }
+    .messageSent{
+        flex: 1;
+        height: 626px;
+    }
+    .sentIcon{
+        width: 100px;
     }
 }

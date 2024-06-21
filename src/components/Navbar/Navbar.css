@@ -65,6 +65,7 @@ nav h1{
     cursor: pointer;
 }
 .navLinks-bg{
+    background-color: var(--color-grey);
 }
 .navLinks-sm{
     text-align: right;

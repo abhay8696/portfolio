@@ -5,13 +5,18 @@ import "./Contact.css";
 import phoneIcon from "../../assets/phoneIcon.svg";
 import emailIcon from "../../assets/emailIcon.svg";
 import locationIcon from "../../assets/locationIcon.svg";
+import sentIcon from "../../assets/sentIcon.svg";
+//components
+import FormComp from './FormComp';
 
 
 const Contact = () => {
-    //functions
-    const handleSubmit = event => {
-        event.preventDefault();
-        console.log(event)
+    //states
+    const [messageSent, setMessageSent] = useState(false);
+    //funstions
+    const handleFormSubmit = data => {
+        console.log(data)
+        setMessageSent(true);
     }
     //sub-component
     const ContactIconCard = ({icon, name, value}) => {
@@ -25,9 +30,17 @@ const Contact = () => {
             >
                 <div className='ContactIconCard-left'>
                     <img src={icon} alt={`name-${icon}`} className='ContactIcon'/>
-                    <span className='contactCardName'>{name}</span>
+                    {/* <span className='contactCardName'>{name}</span> */}
                 </div>
                 <span className='contactCardValue'>{value}</span>
+            </div>
+        )
+    }
+    const SentIconComp = () => {
+        return(
+            <div className='messageSent'>
+                <img src={sentIcon} alt='message sent icon' className='sentIcon'/>
+                <span className='sentMessage'>Message Sent!</span>
             </div>
         )
     }
@@ -42,19 +55,13 @@ const Contact = () => {
                     <ContactIconCard icon={locationIcon} name={"location"} value="Pune, India" />
                 </div>
 
-                <form className='contactForm' onSubmit={handleSubmit}>
-                    <div className='formTop'>
-                        <div className='heyAbhay'>Hey Abhay, </div>
-                        <textarea placeholder='Write your message...' rows="10" required/>
-                    </div>
-                    <div className='formBottom'>
-                        <label for="contact-name">Cheers, </label>
-                        <input id="contact-name" type='text' placeholder='Name' required/>
-                        <input type='email' placeholder='Email' required/>
-                        <input type='number' placeholder='Phone' />
-                        <button type='submit'>Send Message</button>
-                    </div>
-                </form>
+                {
+                    messageSent ? <SentIconComp /> : <FormComp handleFormSubmit={handleFormSubmit} />
+                }
+                
+
+                
+
             </div>
         </div>
     );
