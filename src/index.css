@@ -73,6 +73,15 @@ h2{
   margin-bottom: 1rem;
 }
 
+h3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   /* border: 1px solid #d5d5d5; */

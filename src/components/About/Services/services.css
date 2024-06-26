@@ -1,0 +1,44 @@
+
+.services{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services h3{
+    text-align: center;
+
+}
+.servicesGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.serviceCard{
+    background-color: var(--color-grey);
+    padding: 1rem 0.5rem;
+    width: 400px;
+    max-width: 100%;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.serviceIcon{
+    max-width: 35px;
+    opacity: 0.6;
+}
+.serviceName{
+    opacity: 0.6;
+}
+
+/* above 900px */
+@media screen and (min-width: 900px) {
+    .serviceCard{
+        /* width: 50%; */
+    }
+}

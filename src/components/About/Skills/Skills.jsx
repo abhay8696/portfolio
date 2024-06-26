@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 //styles
 import "./Skills.css";
-import jsIcon from "../../assets/jsIcon.svg";
-import nodeIcon from "../../assets/nodeIcon.svg";
-import htmlIcon from "../../assets/htmlIcon.svg";
-import gitIcon from "../../assets/gitIcon.svg";
-import cssIcon from "../../assets/cssIcon.svg";
-import materialUiIcon from "../../assets/materialUiIcon.svg";
-import reactIcon from "../../assets/reactIcon.svg";
-import bootstrap from "../../assets/bootstrapIcon.svg";
-import ubuntuIcon from "../../assets/ubuntuIcon.svg";
-import sassIcon from "../../assets/sassIcon.svg";
-import mysqlIcon from "../../assets/mysqlIcon.svg";
-import mongoIcon from "../../assets/mongoIcon.svg";
-import nextIcon from "../../assets/nextIcon.svg";
-import arrowIcon from "../../assets/arrowIcon.svg"
-import postmanIcon from "../../assets/postmanIcon.svg"
-import firebaseIcon from "../../assets/firebaseIcon.svg"
-import expressIcon from "../../assets/serverIcon.svg"
+import jsIcon from "../../../assets/jsIcon.svg";
+import nodeIcon from "../../../assets/nodeIcon.svg";
+import htmlIcon from "../../../assets/htmlIcon.svg";
+import gitIcon from "../../../assets/gitIcon.svg";
+import cssIcon from "../../../assets/cssIcon.svg";
+import materialUiIcon from "../../../assets/materialUiIcon.svg";
+import reactIcon from "../../../assets/reactIcon.svg";
+import bootstrap from "../../../assets/bootstrapIcon.svg";
+import ubuntuIcon from "../../../assets/ubuntuIcon.svg";
+import sassIcon from "../../../assets/sassIcon.svg";
+import mysqlIcon from "../../../assets/mysqlIcon.svg";
+import mongoIcon from "../../../assets/mongoIcon.svg";
+import nextIcon from "../../../assets/nextIcon.svg";
+import arrowIcon from "../../../assets/arrowIcon.svg"
+import postmanIcon from "../../../assets/postmanIcon.svg"
+import firebaseIcon from "../../../assets/firebaseIcon.svg"
+import expressIcon from "../../../assets/serverIcon.svg"
 //componenets
 import SkillCard from './SkillCard';
 import SkillCardBig from './SkillCardBig';
@@ -65,13 +65,13 @@ const Skills = () => {
 
     // console.log(displaySkillCards())
     return (
-        <section className='commonWrapper Skills' id='skills'>
+        <section className='Skills' id='skills'>
             <div className='skillsHead'>
-                <h2>Skills</h2>
-                <button onClick={()=> setShowAll(!showAll)} className='toggleSkillsButton'>
+                <h3>Skills</h3>
+                {/* <button onClick={()=> setShowAll(!showAll)} className='toggleSkillsButton'>
                     <span>{!showAll ? "hide" : "show all"}</span>
                     <span><img className={showAll ? "showDown" : "showUp"} src={arrowIcon} alt="arrow icon" /></span>
-                </button>
+                </button> */}
             </div>
             <section className={!showAll ? cardSectionSmall_class_blurBack : 'card-section-small'}>
                 {displaySkillCards()}
