@@ -9,7 +9,7 @@
 .aboutTop{
     /* background-color: rebeccapurple; */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -26,6 +26,7 @@
     opacity: 0.7;
     font-weight: 400;
     font-size: 1rem;
+    margin: 0;
 }
 
 .aboutTexts{
