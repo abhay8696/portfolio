@@ -14,7 +14,7 @@ const About = () => {
                 <aside className='about-leftSide'>
                     <div className='aboutTop'>
                         <div className='aboutTitle'>
-                            <h2 className='aboutName'>John Doe</h2>
+                            <h2 className='aboutName'>Abhay K.</h2>
                             <h3 className='aboutRole'>Software Developer</h3>
                         </div>
                         <img src={myDP} alt='my image' className='aboutImage-left'/>
