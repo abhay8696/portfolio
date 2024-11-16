@@ -1,65 +1,66 @@
-
-.aboutInfo{
+.aboutInfo {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.aboutTop{
+.aboutTop {
     /* background-color: rebeccapurple; */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
 
-.aboutTitle{
+.aboutTitle {
     line-height: 30px;
     margin-bottom: 1rem;
 }
 
-.aboutName{
+.aboutName {
     font-size: 2rem;
     margin: 0;
 }
-.aboutRole{
+.aboutRole {
     opacity: 0.7;
     font-weight: 400;
     font-size: 1rem;
     margin: 0;
+    margin-top: 0.5rem;
 }
 
-.aboutTexts{
+.aboutTexts {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.aboutPara{
+.aboutPara {
     opacity: 0.6;
     width: 100%;
     max-width: 750px;
     line-height: 1.8em;
     letter-spacing: 0.5px;
+    font-weight: 300;
 }
 
-.aboutImage-left{
+.aboutImage-left {
     max-width: 100px;
     border-radius: 0.5rem;
 }
-.about-rightSide{
+.about-rightSide {
     display: none;
 }
-.aboutImage-right{
+.aboutImage-right {
     max-width: 300px;
     border-radius: 1rem;
 }
 
 /* above 900px */
 @media screen and (min-width: 900px) {
-    .aboutImage-left{
+    .aboutImage-left {
         display: none;
     }
-    .about-rightSide{
+    .about-rightSide {
         display: block;
     }
 }
