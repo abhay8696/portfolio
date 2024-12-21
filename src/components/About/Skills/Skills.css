@@ -1,5 +1,4 @@
-
-.Skills{
+.Skills {
     /* height: 75vh; */
     /* height: calc(580px + 50px + 0.75rem + 2rem); */
     height: 50vh;
@@ -10,17 +9,17 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.skillsHead{
+.skillsHead {
     /* display: flex;
     align-items: center;
     justify-content: space-between; */
     height: 50px;
     width: 100%;
 }
-.skillsHead h3{
+.skillsHead h3 {
     text-align: center;
 }
-.toggleSkillsButton{
+.toggleSkillsButton {
     height: 1.5rem;
     display: flex;
     align-items: center;
@@ -30,23 +29,23 @@
     cursor: pointer;
     /* background-color: rebeccapurple; */
 }
-.toggleSkillsButton img{
+.toggleSkillsButton img {
     max-height: 1.5rem;
     margin-left: 0.25rem;
     transition: all 500ms;
 }
-.showDown{
+.showDown {
 }
-.showUp{
+.showUp {
     /* transform: rotate(-180deg); */
     transform: rotate(-180deg);
 }
-.blurBackground{
+.blurBackground {
     background-color: #14141480;
     backdrop-filter: blur(3px);
     /* transition: all 1s; */
 }
-.card-section-small{
+.card-section-small {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -57,14 +56,14 @@
     transition: all 1s;
     top: calc(50px);
 }
-.SkillCardSmall-hide{
+.SkillCardSmall-hide {
     transform: scale(0);
     transform-origin: top;
 }
-.SkillCardSmall-show{
-    transform: scale(100%) ;
+.SkillCardSmall-show {
+    transform: scale(100%);
 }
-.SkillCardSmall{
+.SkillCardSmall {
     /* background-color: var(--color-grey); */
     padding: 0.25rem;
     border-radius: 4px;
@@ -77,19 +76,19 @@
     gap: 0.5rem;
     transition: all 500ms;
 }
-.skillIcon{
+.skillIcon {
     max-width: 75%;
 }
-.skillText{
+.skillText {
     font-size: 0.75rem;
     opacity: 0.75;
 }
-.card-caraousel{
+.card-caraousel {
     margin-top: 1rem;
     z-index: -1;
     position: relative;
 }
-.SkillCardBig{
+.SkillCardBig {
     width: 200px;
     justify-self: center;
     padding: 2rem 0.5rem;
@@ -98,47 +97,48 @@
     align-items: center;
     gap: 0.75rem;
     border-radius: 1rem;
-    animation: caraousel 48s infinite;
+    animation: caraousel 51s infinite;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
 }
-.skillIconBig{
+.skillIconBig {
     max-width: 75%;
     /* animation: caraousel 3s infinite; */
 }
-.skillTextBig{
+.skillTextBig {
     /* animation: caraousel 3s infinite; */
 }
 
-
 /* desktop screens */
 @media screen and (min-width: 900px) {
-    .card-section-small{
+    .card-section-small {
         justify-content: center;
         max-width: 75%;
         transform: translateX(-50%);
         left: 50%;
     }
-    .SkillCardSmall{
-    width: 100px;
-    height: 133px;
+    .SkillCardSmall {
+        width: 100px;
+        height: 133px;
     }
-    .SkillCardBig{
+    .SkillCardBig {
         width: 250px;
     }
 }
 @keyframes caraousel {
-    0%, 100%{
+    0%,
+    100% {
         transform: translateX(0%) scale(90%);
         opacity: 0;
     }
-    2%, 5.7%{
+    2%,
+    5.7% {
         transform: translateX(-50%) scale(100%);
         opacity: 1;
     }
-    7.7%{
+    7.7% {
         transform: translateX(-100%) scale(90%);
         opacity: 0;
     }
